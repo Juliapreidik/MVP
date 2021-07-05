@@ -1,0 +1,21 @@
+@use "sass:map";
+
+.gallery {
+    max-width: 670px !important;
+     > div {
+        
+        img {
+            height: 250px;
+            margin: 8px;
+
+            @media only screen and (min-width: map.get($grid-breakpoints, "md")) {
+
+                &:hover {
+                    @include zoom-in(1.4, 2.5s);
+                }
+            }
+        }
+
+    }
+    
+}

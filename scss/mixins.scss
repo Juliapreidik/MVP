@@ -1,0 +1,19 @@
+
+@mixin zoom-in($scale: 2, $transition-time: 1s, $transition-property: all){
+    transform: scale($scale);
+    transition: $transition-property $transition-time;
+}
+
+@mixin square($size, $radius: 0) {
+    width: $size;
+    height: $size;
+    
+    @if $radius != 0 {
+        border-radius: $radius;
+    }
+}
+
+@mixin gradient-y($start-color: $gray-700, $end-color: $gray-800, $start-percent: null, $end-percent: null) {
+    background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+  }
+  

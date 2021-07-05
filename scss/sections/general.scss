@@ -1,0 +1,32 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    @extend html;
+    @include gradient-y($start-color: $white, $end-color: $secondary, $start-percent: 20%, $end-percent: 90%);
+}
+
+
+.logo:hover {
+    @include zoom-in;
+}
+
+
+.navbar-light .navbar-nav {
+    .nav-link.active,
+    .show>.nav-link {
+        font-weight: bold;
+        padding: 8px;
+    }
+
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color:$white;
+    background-color: $primary;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: $primary;
+}
